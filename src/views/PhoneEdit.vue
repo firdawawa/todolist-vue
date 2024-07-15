@@ -1,6 +1,6 @@
 <template>
 
-<div class="container mt-5">
+<div class="container mt-24">
         <div class="card-table">
             <div class="block max-w p-6 m-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-100 dark:border-gray-300">
                 <div class="card-header">
@@ -70,7 +70,7 @@ export default {
     methods: {
 
         getPhoneData(phoneId){
-            axios.get(`http://127.0.0.1:8000/api/phones/${phoneId}/edit`)
+            axios.get(`http://192.168.5.32:8000/api/phones/${phoneId}/edit`)
             .then(res => {
                 console.log(res.data.phone);
 
@@ -90,7 +90,7 @@ export default {
         updatePhone(){
 
             var $this = this;
-            axios.put(`http://127.0.0.1:8000/api/phones/${this.phoneId}/edit`, this.model.phones)
+            axios.put(`http://192.168.5.32:8000/api/phones/${this.phoneId}/edit`, this.model.phones)
                 .then(res => {
 
                     console.log(res.data)

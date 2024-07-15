@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="mt-20">
     <div class="card-table">
         <div class="block max-w p-6 m-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-100 dark:border-gray-300">
             <div class="card-header">

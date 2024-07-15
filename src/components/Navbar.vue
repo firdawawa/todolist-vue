@@ -2,9 +2,8 @@
 
 </script>
 <template>
-    
 
-<nav class="bg-white border-gray-200 dark:bg-primary">
+<nav class="bg-white border-gray-200 dark:bg-primary fixed z-50 top-0 w-full">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <img src="https://i.ibb.co.com/PFLPcyp/listo.png" class="h-6 m-4" alt="List'O Logo" />
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-16 justify-center text-sm text-white rounded-lg md:hidden hover:bg-pink-900 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-pink-700 dark:focus:ring-pink-900" aria-controls="navbar-default" aria-expanded="false">

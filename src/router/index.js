@@ -6,6 +6,8 @@ import PhoneCreate from '@/views/PhoneCreate.vue'
 import PhoneEdit from '@/views/PhoneEdit.vue'
 import TodoView from '@/views/TodoView.vue'
 import BudgetView from '@/views/BudgetView.vue'
+import BudgetCreate from '@/views/BudgetCreate.vue'
+import BudgetEdit from '@/views/BudgetEdit.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,16 @@ const router = createRouter({
       path: '/budget',
       name: 'budget',
       component: BudgetView
+    },
+    {
+      path: '/budget/create',
+      name: 'budgetCreate',
+      component: BudgetCreate
+    },
+    {
+      path: '/budget/:id/edit',
+      name: 'budgetEdit',
+      component: BudgetEdit
     },
   ]
 })

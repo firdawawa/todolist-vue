@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container mt-20">
         <div class="card-table">
             <div class="block max-w p-6 m-1 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-100 dark:border-gray-300">
                 <div class="card-header">
@@ -85,7 +85,7 @@ export default {
     },
     methods: {
         getPhone(){
-            axios.get('http://127.0.0.1:8000/api/phones').then(res => {
+            axios.get('http://192.168.5.32:8000/api/phones').then(res => {
                 this.phones = res.data.phones
                 // console.log(this.phones)
             });
@@ -94,7 +94,7 @@ export default {
         deletePhone(phoneId){
 
             if(confirm('Are you sure to delete this?')){
-                axios.delete(`http://127.0.0.1:8000/api/phones/${phoneId}/delete`)
+                axios.delete(`http://192.168.5.32:8000/api/phones/${phoneId}/delete`)
                     .then(res => {
                         alert(res.data.message);
                         this.getPhone();
