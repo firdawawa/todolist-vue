@@ -103,7 +103,7 @@ export default {
     submit() {
       var $this = this;
       axios
-        .post('http://192.168.5.32:8000/api/budget', this.model.data)
+        .post('http://127.0.0.1:8000/api/budget', this.model.data)
         .then(res => {
           console.log(res.data);
           alert(res.data.message);

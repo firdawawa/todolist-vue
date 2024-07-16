@@ -101,7 +101,7 @@ export default {
   methods: {
     getData(id) {
       axios
-        .get(`http://192.168.5.32:8000/api/budget/${id}/edit`)
+        .get(`http://127.0.0.1:8000/api/budget/${id}/edit`)
         .then(res => {
           this.model.data = res.data.budget;
         })
@@ -118,7 +118,7 @@ export default {
       var $this = this;
       axios
         .put(
-          `http://192.168.5.32:8000/api/budget/${this.id}/edit`,
+          `http://127.0.0.1:8000/api/budget/${this.id}/edit`,
           this.model.data,
         )
         .then(res => {

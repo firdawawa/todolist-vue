@@ -85,14 +85,14 @@ export default {
   },
   methods: {
     getData() {
-      axios.get('http://192.168.5.32:8000/api/notes').then(res => {
+      axios.get('http://127.0.0.1:8000/api/notes').then(res => {
         this.datas = res.data.notes;
       });
     },
     deleteData(id) {
       if (confirm('Are you sure to delete this?')) {
         axios
-          .delete(`http://192.168.5.32:8000/api/notes/${id}/delete`)
+          .delete(`http://127.0.0.1:8000/api/notes/${id}/delete`)
           .then(res => {
             alert(res.data.message);
             this.getData();

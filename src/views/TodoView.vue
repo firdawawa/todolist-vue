@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     getData() {
-      axios.get('http://192.168.5.32:8000/api/items').then(res => {
+      axios.get('http://127.0.0.1:8000/api/items').then(res => {
         this.datas = res.data;
         console.log(this.datas);
       });
@@ -84,7 +84,7 @@ export default {
     postData(e) {
       e.preventDefault();
       axios
-        .post(`http://192.168.5.32:8000/api/item/store`, this.payload)
+        .post(`http://127.0.0.1:8000/api/item/store`, this.payload)
         .then(e => {
           this.getData();
           this.payload.item.name = '';
@@ -100,7 +100,7 @@ export default {
     deleteData(id) {
       if (confirm('Are you sure to delete this?')) {
         axios
-          .delete(`http://192.168.5.32:8000/api/item/${id}`)
+          .delete(`http://127.0.0.1:8000/api/item/${id}`)
           .then(res => {
             alert('berhasil delete data');
             this.getData();
@@ -121,7 +121,7 @@ export default {
         },
       };
       axios
-        .put(`http://192.168.5.32:8000/api/item/${id}`, payloadData)
+        .put(`http://127.0.0.1:8000/api/item/${id}`, payloadData)
         .then(e => {
           this.getData();
         })

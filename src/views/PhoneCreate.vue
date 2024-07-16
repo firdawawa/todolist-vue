@@ -67,7 +67,7 @@ export default {
         savePhone(){
 
             var $this = this;
-            axios.post('http://192.168.5.32:8000/api/phones', this.model.phones)
+            axios.post('http://127.0.0.1:8000/api/phones', this.model.phones)
                 .then(res => {
 
                     console.log(res.data)

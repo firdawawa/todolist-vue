@@ -80,7 +80,7 @@ export default {
     submit() {
       var $this = this;
       axios
-        .post('http://192.168.5.32:8000/api/notes', this.model.note)
+        .post('http://127.0.0.1:8000/api/notes', this.model.note)
         .then(res => {
           console.log(res.data);
           alert(res.data.message);
